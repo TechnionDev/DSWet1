@@ -16,7 +16,7 @@ namespace LecturesStats {
     void Lecture::change_location(int num_views, ListNode* (& tail)) {
         try {
             ListNode* temp_node = location;
-            for (int i = num_views; i > 0; i--) {
+            for (int i = num_views; i >= 0; i--) {
                 if (temp_node->get_num_of_views() == this->get_views()) {
                     temp_node->insert(course_id, lecture_id);
                     location->remove(course_id, lecture_id, tail);
